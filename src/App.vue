@@ -1,7 +1,7 @@
 <template>
   <div>
-    <LoginCard v-if="loginCard" @OpenHome="loginHome" />
-    <HomePage v-if="openHome" @OpenHome="loginHome" />
+    <LoginCard @goHome="loginHome" v-if="loginCard" />
+    <HomePage @goHome="loginHome" v-else />
   </div>
 </template>
 
@@ -32,13 +32,5 @@ export default {
   margin: 0;
   padding: 0;
   font-family: Google Sans;
-}
-
-body {
-  background: linear-gradient(340deg, #20c4ce 12%, #33e4ef 86%);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>

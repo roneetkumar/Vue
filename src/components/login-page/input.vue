@@ -2,7 +2,7 @@
   <div class="inputLogin">
     <template v-if="placeholder === 'Student ID' ">
       <UserIcon />
-      <input type="text" :placeholder="placeholder" v-model="stuId" @keyup="sendData" />
+      <input type="text" :placeholder="placeholder" v-model="stuId" @keyup="$emit('idInput',stuId)" />
     </template>
     <template v-else>
       <KeyIcon />
@@ -28,11 +28,14 @@ export default {
     KeyIcon,
     UserIcon
   },
-  methods: {
-    sendData() {
-      this.$emit("idInput", this.stuId);
-    }
-  }
+
+  data() {
+    return {
+      stuId: "",
+      stuPass: ""
+    };
+  },
+  methods: {}
 };
 </script>
 
@@ -44,25 +47,26 @@ input {
   box-sizing: border-box;
   color: #33e4ef;
   outline: 0;
+  width: 100%;
 }
 
 .inputLogin {
-  width: 300px;
+  width: 100%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.16);
   padding: 14px 0;
   display: flex;
   align-items: center;
   margin: auto;
   margin-bottom: 30px;
-}
-
-svg {
-  display: inline-block;
-  margin-right: 10px;
-  fill: rgba(0, 0, 0, 0.24);
+  max-width: 300px;
 }
 
 input::placeholder {
   color: rgba(0, 0, 0, 0.24);
+}
+
+svg {
+  margin-right: 10px;
+  fill: rgba(0, 0, 0, 0.24);
 }
 </style>

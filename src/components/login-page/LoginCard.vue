@@ -1,13 +1,15 @@
 <template>
-  <div class="login-wrapper">
-    <Logo />
-    <h1>Vox</h1>
-    <Input :placeholder="'Student ID'" @idInput="stuIdInput" />
-    <Input :placeholder="'Password'" @passInput="stuPassInput" />
-    <button type="submit" @click.prevent="logIn">Submit</button>
-    <h2>Forget Password ?</h2>
-    <button class="createAccount" type="submit" @click.prevent="logIn">Create Account</button>
-    <h2>Fraincais</h2>
+  <div class="loginWrapper">
+    <form>
+      <Logo :fill="'#33e4ef'" />
+      <h1>Vox</h1>
+      <Input :placeholder="'Student ID'" @idInput="stuIdInput" />
+      <Input :placeholder="'Password'" @passInput="stuPassInput" />
+      <button type="submit" @click.prevent="logIn">Submit</button>
+      <h2>Forget Password ?</h2>
+      <button class="createAccount" @click.prevent="logIn">Create Account</button>
+      <h2>Fraincais</h2>
+    </form>
   </div>
 </template>
 
@@ -16,6 +18,9 @@ import Logo from "../../assets/logo";
 import Input from "./input";
 
 export default {
+  props: {
+    fill: String
+  },
   components: {
     Logo,
     Input
@@ -44,40 +49,59 @@ export default {
           name: "Davinder"
         }
       ],
-      inputStudentID: "",
-      inputPassword: "",
+      // inputStudentID: "",
+      // inputPassword: "",
       userFound: false
     };
   },
   methods: {
     logIn() {
       this.students.forEach(student => {
-        if (student.id === this.inputStudentID) {
+        if (student.id === sessionStorage.inputStudentID) {
           this.userFound = true;
-          if (student.pass === this.inputPassword) {
-            alert(`Welcome ${student.name}`);
-            this.$emit("OpenHome", true);
+          if (student.pass === sessionStorage.inputStudentPass) {
+            // alert(`Welcome ${student.name}`);
+            this.$emit("goHome", true);
           } else {
-            alert("wrong password");
+            alert("Wrong Password");
           }
         }
       });
       if (!this.userFound) {
-        alert("User Not Found");
+        // alert("User Not Found");
       }
     },
     stuIdInput(value) {
-      this.inputStudentID = value;
+      // this.inputStudentID = value;
+      sessionStorage.inputStudentID = value;
     },
     stuPassInput(value) {
-      this.inputPassword = value;
+      // this.inputPassword = value;
+      sessionStorage.inputStudentPass = value;
     }
+  },
+  beforeMount() {
+    this.logIn();
   }
 };
 </script>
 
 <style scoped>
-.login-wrapper {
+.loginWrapper {
+  position: relative;
+  background: linear-gradient(340deg, #20c4ce 12%, #33e4ef 86%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+form {
+  position: relative;
   width: 100%;
   max-width: 450px;
   background: #fff;
@@ -86,18 +110,18 @@ export default {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
   margin: auto;
+  transition: transform 0.2s ease;
+  /* top: 0;
+  transform: translateY(0); */
+  /* align-self: flex-end; */
 }
 
-.logo {
-  margin: auto;
-  display: block;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #33e4ef;
-  font-size: 24px;
+@media (max-width: 500px) {
+  form {
+    /* top: 100%; */
+    /* bottom: 0; */
+    /* transform: translateY(-100px); */
+  }
 }
 
 h2 {
@@ -107,13 +131,21 @@ h2 {
   margin-bottom: 40px;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #33e4ef;
+  font-size: 24px;
+}
+
 h2:hover {
   text-decoration: underline;
 }
 
 button {
   font-size: 24px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 60px;
   border-radius: 14px;
   border: 3px solid #33e4ef;
@@ -158,22 +190,7 @@ input {
   margin: auto;
 }
 
-svg {
-  display: inline-block;
-  margin-right: 10px;
-  fill: rgba(0, 0, 0, 0.24);
-}
-
 input::placeholder {
   color: rgba(0, 0, 0, 0.24);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

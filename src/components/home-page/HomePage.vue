@@ -1,36 +1,33 @@
 <template>
-  <div>
-    <h1>Home Page</h1>
-    <button @click.prevent="logOut">Logout</button>
+  <div class="homePageWrapper">
+    <Header />
+    <main>
+      <button @click.prevent="logOut">Logout</button>
+    </main>
+    <NavBar />
   </div>
 </template>
 
 <script>
+import Header from "./header";
+import NavBar from "./nav";
+
 export default {
+  components: {
+    Header,
+    NavBar
+  },
   methods: {
     logOut() {
-      this.$emit("OpenHome", false);
+      this.$emit("goHome", false);
+      sessionStorage.clear();
     }
   }
 };
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-  margin: 40px;
-  color: darkblue;
-}
-
 button {
   margin: 0 auto;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>
