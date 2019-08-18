@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <LoginCard v-if="loginCard" @OpenHome="loginHome" />
+    <HomePage v-if="openHome" @OpenHome="loginHome" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginCard from "./components/login-page/LoginCard";
+import HomePage from "./components/home-page/HomePage";
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: "app",
+  components: { LoginCard, HomePage },
+  data() {
+    return {
+      openHome: false,
+      loginCard: true
+    };
+  },
+  methods: {
+    loginHome(value) {
+      this.openHome = value;
+      this.loginCard = !value;
+    }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Google Sans;
+}
+
+body {
+  background: linear-gradient(340deg, #20c4ce 12%, #33e4ef 86%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
