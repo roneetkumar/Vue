@@ -7,7 +7,7 @@
       <MioPage v-else-if="nav === 'Mio'" />
       <NewsPage v-else-if="nav === 'News'" />
       <ServicePage v-else-if="nav === 'Services'" />
-      <AboutPage v-else-if="nav === 'About'" />
+      <AboutPage v-else />
     </main>
     <NavBar @menu="navigate" />
   </div>

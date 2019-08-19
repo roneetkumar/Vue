@@ -39,5 +39,18 @@ input {
   justify-self: baseline;
   width: 100%;
   height: 100%;
+  color: #33e4ef;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.24);
+}
+
+svg {
+  fill: #20c4ce;
 }
 </style>

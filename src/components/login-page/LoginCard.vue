@@ -5,9 +5,9 @@
       <h1>Vox</h1>
       <Input :placeholder="'Student ID'" @idInput="stuIdInput" />
       <Input :placeholder="'Password'" @passInput="stuPassInput" />
-      <button type="submit" @click.prevent="logIn">Submit</button>
+      <button class="createAccount" type="submit" @click.prevent="logIn">Submit</button>
       <h2>Forget Password ?</h2>
-      <button class="createAccount" @click.prevent="logIn">Create Account</button>
+      <button @click.prevent="logIn">Create Account</button>
       <h2>Fraincais</h2>
     </form>
   </div>

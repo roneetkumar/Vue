@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 input {
   display: inline-block;
   font-size: 20px;
