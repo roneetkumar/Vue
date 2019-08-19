@@ -23,7 +23,7 @@ export default {
   max-width: 344px;
   height: 48px;
   background: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 14px;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
@@ -38,5 +38,6 @@ input {
   font-size: 18px;
   justify-self: baseline;
   width: 100%;
+  height: 100%;
 }
 </style>

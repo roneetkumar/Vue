@@ -17,6 +17,8 @@
 import Logo from "../../assets/logo";
 import Input from "./input";
 
+import Students from "../user-data/students.json";
+
 export default {
   props: {
     fill: String
@@ -27,36 +29,13 @@ export default {
   },
   data() {
     return {
-      students: [
-        {
-          id: "1111",
-          pass: "11",
-          name: "Roneet"
-        },
-        {
-          id: "2222",
-          pass: "22",
-          name: "Roop"
-        },
-        {
-          id: "3333",
-          pass: "33",
-          name: "Vinay"
-        },
-        {
-          id: "4444",
-          pass: "44",
-          name: "Davinder"
-        }
-      ],
-      // inputStudentID: "",
-      // inputPassword: "",
+      Students,
       userFound: false
     };
   },
   methods: {
     logIn() {
-      this.students.forEach(student => {
+      this.Students.forEach(student => {
         if (student.id === sessionStorage.inputStudentID) {
           this.userFound = true;
           if (student.pass === sessionStorage.inputStudentPass) {

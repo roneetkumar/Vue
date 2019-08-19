@@ -1,12 +1,13 @@
 <template>
   <div class="lea-grid">
     <h1 class="heading">Lea</h1>
-    <LeaCard v-for="card in leaCards" :key="card.courseNo" :card="card" />
+    <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
   </div>
 </template>
 
 <script>
 import LeaCard from "./lea-card";
+import courseData from "../user-data/courses.json";
 
 export default {
   components: {
@@ -14,28 +15,7 @@ export default {
   },
   data() {
     return {
-      leaCards: [
-        {
-          courseNo: "1",
-          courseName: "Object Oriented"
-        },
-        {
-          courseNo: "2",
-          courseName: "Database - II"
-        },
-        {
-          courseNo: "3",
-          courseName: "Python"
-        },
-        {
-          courseNo: "4",
-          courseName: "EcmaScript"
-        },
-        {
-          courseNo: "5",
-          courseName: "Web Development"
-        }
-      ]
+      courseData
     };
   }
 };

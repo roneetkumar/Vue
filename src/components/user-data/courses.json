@@ -1,0 +1,34 @@
+[
+    {
+        "courseNo": "1",
+        "courseName": "Object Oriented"
+    },
+    {
+        "courseNo": "2",
+        "courseName": "Database - II"
+    },
+    {
+        "courseNo": "3",
+        "courseName": "Python"
+    },
+    {
+        "courseNo": "4",
+        "courseName": "EcmaScript"
+    },
+    {
+        "courseNo": "5",
+        "courseName": "Web Development"
+    },
+    {
+        "courseNo": "6",
+        "courseName": "Python - II"
+    },
+    {
+        "courseNo": "7",
+        "courseName": "EcmaScript - II"
+    },
+    {
+        "courseNo": "8",
+        "courseName": "Web Development - II"
+    }
+]
