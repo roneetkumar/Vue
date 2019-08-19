@@ -1,5 +1,5 @@
 <template>
-  <h1 class="heading">mio page</h1>
+  <h1 class="heading">news</h1>
 </template>
 
 <script>

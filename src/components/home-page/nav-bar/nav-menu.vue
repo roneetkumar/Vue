@@ -12,12 +12,11 @@ export default {
   },
   data() {
     return {
-      menu: ["News", "Mio", "Lea", "Servies", "About"]
+      menu: ["News", "Mio", "Lea", "Services", "About"]
     };
   },
   methods: {
     selectItem(item) {
-      // this.selected = item;
       this.$emit("menu", item);
     }
   }

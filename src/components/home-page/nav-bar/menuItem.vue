@@ -20,7 +20,7 @@ export default {
   height: 50px;
   background: #fff;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 

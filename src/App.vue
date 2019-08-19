@@ -33,4 +33,8 @@ export default {
   padding: 0;
   font-family: Google Sans;
 }
+
+.heading {
+  text-align: center;
+}
 </style>

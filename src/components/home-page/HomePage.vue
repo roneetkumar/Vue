@@ -1,10 +1,13 @@
 <template>
   <div class="homePageWrapper">
     <Header />
-    <button @click.prevent="logOut">Logout</button>
     <main>
-      <LeaPage v-if="nav=== 'Lea'" />
-      <MioPage v-else-if="nav=== 'Mio'" />
+      <button @click.prevent="logOut">Logout</button>
+      <LeaPage v-if="nav === 'Lea'" />
+      <MioPage v-else-if="nav === 'Mio'" />
+      <NewsPage v-else-if="nav === 'News'" />
+      <ServicePage v-else-if="nav === 'Services'" />
+      <AboutPage v-else-if="nav === 'About'" />
     </main>
     <NavBar @menu="navigate" />
   </div>
@@ -12,15 +15,22 @@
 
 <script>
 import Header from "./header";
-import NavBar from "./nav";
-import LeaPage from "../lea-page/leaPage";
+import NavBar from "./nav-bar/nav";
+import LeaPage from "../lea-page/lea-page";
 import MioPage from "../mio-page/mio-page";
+import NewsPage from "../news-page/news-page";
+import ServicePage from "../service-page/service-page";
+import AboutPage from "../about-page/about-page";
+
 export default {
   components: {
     Header,
     NavBar,
     LeaPage,
-    MioPage
+    MioPage,
+    NewsPage,
+    ServicePage,
+    AboutPage
   },
   data() {
     return {
@@ -44,6 +54,7 @@ export default {
   background: #26d0d91a;
 }
 button {
-  margin: 0 auto;
+  display: block;
+  margin: 10px auto;
 }
 </style>

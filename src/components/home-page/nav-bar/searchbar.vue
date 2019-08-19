@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import SearchIcon from "../../assets/searchIcon";
-import MenuIcon from "../../assets/menuIcon";
+import SearchIcon from "../../../assets/searchIcon";
+import MenuIcon from "../../../assets/menuIcon";
 
 export default {
   components: {
@@ -30,11 +30,12 @@ export default {
   align-items: center;
   margin: auto;
   margin-bottom: 20px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  padding: 2px;
 }
 
 input {
-  font-size: 16px;
+  font-size: 18px;
   justify-self: baseline;
   width: 100%;
 }

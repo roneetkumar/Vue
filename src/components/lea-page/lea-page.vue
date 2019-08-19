@@ -1,11 +1,12 @@
 <template>
   <div class="lea-grid">
+    <h1 class="heading">Lea</h1>
     <LeaCard v-for="card in leaCards" :key="card.courseNo" :card="card" />
   </div>
 </template>
 
 <script>
-import LeaCard from "./leaCard";
+import LeaCard from "./lea-card";
 
 export default {
   components: {
@@ -43,9 +44,8 @@ export default {
 <style scoped>
 .lea-grid {
   max-width: 1000px;
-  /* background: pink; */
   margin: auto;
-  padding: 10px;
+  padding: 0 10px;
   padding-bottom: 180px;
   text-align: center;
 }

@@ -7,7 +7,7 @@
 
 <script>
 import SearchBar from "./searchbar";
-import NavMenu from "./nav-menu/nav-menu";
+import NavMenu from "./nav-menu";
 
 export default {
   components: {
@@ -16,7 +16,6 @@ export default {
   },
   methods: {
     sendData(val) {
-      // alert(val);
       this.$emit("menu", val);
     }
   }
