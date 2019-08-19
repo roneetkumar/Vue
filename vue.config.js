@@ -1,4 +1,4 @@
 // vue.config.js
 module.exports = {
-    publicPath: 'vue'
+    publicPath: 'dist/index.html'
 } 
