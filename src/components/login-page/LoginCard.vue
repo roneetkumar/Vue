@@ -111,17 +111,6 @@ form {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
   margin: auto;
   transition: transform 0.2s ease;
-  /* top: 0;
-  transform: translateY(0); */
-  /* align-self: flex-end; */
-}
-
-@media (max-width: 500px) {
-  form {
-    /* top: 100%; */
-    /* bottom: 0; */
-    /* transform: translateY(-100px); */
-  }
 }
 
 h2 {

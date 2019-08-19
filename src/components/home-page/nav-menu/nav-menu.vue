@@ -1,6 +1,6 @@
 <template>
   <div class="nav-menu">
-    <MenuItem v-for="item in menu" :key="item" :itemName="item" />
+    <MenuItem v-for="item in menu" :key="item" :itemName="item" @click.native="selectItem(item)" />
   </div>
 </template>
 
@@ -14,6 +14,12 @@ export default {
     return {
       menu: ["News", "Mio", "Lea", "Servies", "About"]
     };
+  },
+  methods: {
+    selectItem(item) {
+      // this.selected = item;
+      this.$emit("menu", item);
+    }
   }
 };
 </script>

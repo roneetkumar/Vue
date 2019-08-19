@@ -1,18 +1,24 @@
 <template>
   <nav>
     <SearchBar />
-    <NavMenu />
+    <NavMenu @menu="sendData" />
   </nav>
 </template>
 
 <script>
 import SearchBar from "./searchbar";
-import NavMenu from "./nav-menu/nav-menu-bar";
+import NavMenu from "./nav-menu/nav-menu";
 
 export default {
   components: {
     SearchBar,
     NavMenu
+  },
+  methods: {
+    sendData(val) {
+      // alert(val);
+      this.$emit("menu", val);
+    }
   }
 };
 </script>
