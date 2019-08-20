@@ -1,6 +1,8 @@
 <template>
   <div class="nav-menu">
-    <MenuItem v-for="item in menu" :key="item" :itemName="item" @click.native="selectItem(item)" />
+    <router-link v-for="item in menu" :key="item" :to="{name:item}">
+      <MenuItem :itemName="item" @click.native="selectItem(item)" />
+    </router-link>
   </div>
 </template>
 

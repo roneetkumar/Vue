@@ -30,7 +30,6 @@ export default {
   align-items: center;
   margin: auto;
   margin-bottom: 20px;
-  /* box-sizing: border-box; */
   padding: 2px;
 }
 
@@ -47,7 +46,7 @@ input {
 }
 
 input::placeholder {
-  color: rgba(0, 0, 0, 0.24);
+  color: rgba(0, 0, 0, 0.2);
 }
 
 svg {

@@ -10,7 +10,7 @@ import LoginCard from "./components/login-page/LoginCard";
 import HomePage from "./components/home-page/HomePage";
 
 export default {
-  // name: "app",
+  name: "app",
   components: { LoginCard, HomePage },
   data() {
     return {

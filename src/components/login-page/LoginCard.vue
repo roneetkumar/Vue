@@ -16,7 +16,6 @@
 <script>
 import Logo from "../../assets/logo";
 import Input from "./input";
-
 import Students from "../user-data/students.json";
 
 export default {
