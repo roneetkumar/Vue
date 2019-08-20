@@ -2,11 +2,15 @@
   <header>
     <Logo :fill="'#fff'" />
     <h1>Vox</h1>
+    <br />
+    <router-link to="/">
+      <button>Logout</button>
+    </router-link>
   </header>
 </template>
 
 <script>
-import Logo from "../../assets/logo";
+import Logo from "../assets/logo";
 
 export default {
   components: {

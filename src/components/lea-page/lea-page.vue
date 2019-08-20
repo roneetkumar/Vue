@@ -1,7 +1,13 @@
 <template>
-  <div class="lea-grid">
-    <h1 class="heading">Lea</h1>
-    <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
+  <div class="homePageWrapper">
+    <Header />
+    <main>
+      <div class="lea-grid">
+        <h1 class="heading">Lea</h1>
+        <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
+      </div>
+    </main>
+    <NavBar />
   </div>
 </template>
 
@@ -9,9 +15,14 @@
 import LeaCard from "./lea-card";
 import courseData from "../user-data/courses.json";
 
+import Header from "../header";
+import NavBar from "../nav-bar/nav";
+
 export default {
   components: {
-    LeaCard
+    LeaCard,
+    Header,
+    NavBar
   },
   data() {
     return {

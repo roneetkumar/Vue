@@ -32,4 +32,8 @@ export default {
   width: 100%;
   max-width: 600px;
 }
+
+a {
+  color: #fff;
+}
 </style>

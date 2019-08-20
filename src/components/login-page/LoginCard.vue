@@ -5,7 +5,10 @@
       <h1>Vox</h1>
       <Input :placeholder="'Student ID'" @idInput="stuIdInput" />
       <Input :placeholder="'Password'" @passInput="stuPassInput" />
-      <button class="createAccount" type="submit" @click.prevent="logIn">Submit</button>
+      <router-link to="/lea">
+        <button class="createAccount">Submit</button>
+      </router-link>
+
       <h2>Forget Password ?</h2>
       <button @click.prevent="logIn">Create Account</button>
       <h2>Fraincais</h2>
@@ -39,7 +42,7 @@ export default {
           this.userFound = true;
           if (student.pass === sessionStorage.inputStudentPass) {
             // alert(`Welcome ${student.name}`);
-            this.$emit("goHome", true);
+            // this.$emit("goHome", true);
           } else {
             alert("Wrong Password");
           }

@@ -1,17 +1,12 @@
 <template>
   <div>
-    <LoginCard @goHome="loginHome" v-if="loginCard" />
-    <HomePage @goHome="loginHome" v-else />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import LoginCard from "./components/login-page/LoginCard";
-import HomePage from "./components/home-page/HomePage";
-
 export default {
   name: "app",
-  components: { LoginCard, HomePage },
   data() {
     return {
       openHome: false,
@@ -34,7 +29,19 @@ export default {
   font-family: Google Sans;
 }
 
+a {
+  text-decoration: none;
+}
+
 .heading {
   text-align: center;
+}
+
+.homePageWrapper {
+  background: #26d0d91a;
+}
+button {
+  display: block;
+  margin: 10px auto;
 }
 </style>

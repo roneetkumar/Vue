@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import SearchIcon from "../../../assets/searchIcon";
-import MenuIcon from "../../../assets/menuIcon";
+import SearchIcon from "../../assets/searchIcon";
+import MenuIcon from "../../assets/menuIcon";
 
 export default {
   components: {

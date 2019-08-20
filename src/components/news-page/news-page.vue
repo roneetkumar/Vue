@@ -1,9 +1,23 @@
 <template>
-  <h1 class="heading">news</h1>
+  <div class="homePageWrapper">
+    <Header />
+    <main>
+      <h1 class="heading">news</h1>
+    </main>
+    <NavBar />
+  </div>
 </template>
 
 <script>
-export default {};
+import Header from "../header";
+import NavBar from "../nav-bar/nav";
+
+export default {
+  components: {
+    Header,
+    NavBar
+  }
+};
 </script>
 
 <style>
