@@ -5,12 +5,12 @@
       <h1>Vox</h1>
       <Input :placeholder="'Student ID'" @idInput="stuIdInput" />
       <Input :placeholder="'Password'" @passInput="stuPassInput" />
-      <router-link to="/lea">
-        <button class="createAccount">Submit</button>
-      </router-link>
 
+      <button @click.prevent="logIn" class="createAccount">
+        <router-link to="/">Submit</router-link>
+      </button>
       <h2>Forget Password ?</h2>
-      <button @click.prevent="logIn">Create Account</button>
+      <button @click="logIn">Create Account</button>
       <h2>Fraincais</h2>
     </form>
   </div>
@@ -32,37 +32,36 @@ export default {
   data() {
     return {
       Students,
-      userFound: false
+      userFound: false,
+      inputs: {
+        id: "",
+        pass: ""
+      }
     };
   },
   methods: {
     logIn() {
       this.Students.forEach(student => {
-        if (student.id === sessionStorage.inputStudentID) {
+        if (student.id === this.inputs.id) {
           this.userFound = true;
-          if (student.pass === sessionStorage.inputStudentPass) {
-            // alert(`Welcome ${student.name}`);
-            // this.$emit("goHome", true);
+          if (student.pass === this.inputs.pass) {
+            alert(`Welcome ${student.name}`);
+            this.$router.replace({ name: "Lea" });
           } else {
             alert("Wrong Password");
           }
         }
       });
       if (!this.userFound) {
-        // alert("User Not Found");
+        alert("User Not Found");
       }
     },
     stuIdInput(value) {
-      // this.inputStudentID = value;
-      sessionStorage.inputStudentID = value;
+      this.inputs.id = value;
     },
     stuPassInput(value) {
-      // this.inputPassword = value;
-      sessionStorage.inputStudentPass = value;
+      this.inputs.pass = value;
     }
-  },
-  beforeMount() {
-    this.logIn();
   }
 };
 </script>
@@ -123,6 +122,7 @@ button {
   background: #fff;
   margin: 10px auto;
   display: block;
+  outline: 0;
 }
 
 button:hover {

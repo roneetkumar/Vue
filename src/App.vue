@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
@@ -31,6 +31,7 @@ export default {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 .heading {
@@ -40,6 +41,11 @@ a {
 .homePageWrapper {
   background: #26d0d91a;
 }
+
+main {
+  margin-bottom: 180px;
+}
+
 button {
   display: block;
   margin: 10px auto;

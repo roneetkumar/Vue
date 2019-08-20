@@ -37,7 +37,10 @@ export default {
   max-width: 1000px;
   margin: auto;
   padding: 0 10px;
-  padding-bottom: 180px;
   text-align: center;
+}
+
+h1 {
+  margin: 30px auto;
 }
 </style>
