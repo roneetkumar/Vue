@@ -1,6 +1,6 @@
 <template>
   <div class="searchBar">
-    <MenuIcon />
+    <MenuIcon @click.native="passToSideBar" />
     <input type="text" placeholder="Search" />
     <SearchIcon />
   </div>
@@ -15,6 +15,7 @@ export default {
     SearchIcon,
     MenuIcon
   }
+  // data
 };
 </script>
 

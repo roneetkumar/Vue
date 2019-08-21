@@ -1,22 +1,12 @@
 <template>
-  <div class="homePageWrapper">
-    <Header />
-    <main>
-      <h1 class="heading">about</h1>
-    </main>
-    <NavBar />
-  </div>
+  <main>
+    <h1 class="heading">about</h1>
+  </main>
 </template>
 
 <script>
-import Header from "../header";
-import NavBar from "../nav-bar/nav";
-
 export default {
-  components: {
-    Header,
-    NavBar
-  }
+  components: {}
 };
 </script>
 

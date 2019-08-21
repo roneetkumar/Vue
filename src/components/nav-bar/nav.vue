@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <SearchBar />
+    <SearchBar @menuClicked="$emit('menuClicked',true)" />
     <NavMenu @menu="sendData" />
   </nav>
 </template>

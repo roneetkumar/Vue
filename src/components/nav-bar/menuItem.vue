@@ -45,6 +45,7 @@ export default {
   align-items: center;
   justify-content: center;
   fill: #20c4ce;
+  box-sizing: border-box;
 }
 
 .item span {
