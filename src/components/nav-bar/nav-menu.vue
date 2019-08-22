@@ -1,7 +1,7 @@
 <template>
   <div class="nav-menu">
     <router-link active-class="menu-active" v-for="item in menu" :key="item" :to="{name:item}">
-      <MenuItem :itemName="item" @click.native="selectItem(item)" />
+      <MenuItem :itemName="item" />
     </router-link>
   </div>
 </template>
@@ -17,11 +17,7 @@ export default {
       menu: ["News", "Mio", "Lea", "Services", "About"]
     };
   },
-  methods: {
-    selectItem(item) {
-      this.$emit("menu", item);
-    }
-  }
+  methods: {}
 };
 </script>
 

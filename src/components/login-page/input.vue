@@ -3,21 +3,21 @@
     <template v-if="placeholder === 'Student ID' ">
       <UserIcon />
       <input
+        required
         type="text"
         :placeholder="placeholder"
         v-model="stuId"
         @keyup="$emit('idInput',stuId)"
-        required
       />
     </template>
     <template v-else>
       <KeyIcon />
       <input
+        required
         type="password"
         :placeholder="placeholder"
         v-model="stuPass"
         @keyup="$emit('passInput',stuPass)"
-        required
       />
     </template>
   </div>
@@ -54,13 +54,14 @@ input {
   box-sizing: border-box;
   color: #33e4ef;
   outline: 0;
+  height: 100%;
   width: 100%;
 }
 
 .inputLogin {
   width: 100%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-  padding: 14px 0;
+  height: 55px;
   display: flex;
   align-items: center;
   margin: auto;

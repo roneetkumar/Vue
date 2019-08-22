@@ -36,7 +36,9 @@ a {
 }
 
 main {
-  margin-bottom: 180px;
+  margin: 30px auto;
+  padding: 0 10px;
+  padding-bottom: 168px;
 }
 
 button {

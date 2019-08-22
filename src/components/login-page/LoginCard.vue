@@ -10,7 +10,7 @@
         <router-link to="/">Submit</router-link>
       </button>
       <h2>Forget Password ?</h2>
-      <button @click="logIn">Create Account</button>
+      <button>Create Account</button>
       <h2>Fraincais</h2>
     </form>
   </div>

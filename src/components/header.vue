@@ -35,4 +35,11 @@ h1 {
   text-align: center;
   font-size: 24px;
 }
+
+button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid slategrey;
+  outline: 0;
+}
 </style>

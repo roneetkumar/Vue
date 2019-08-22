@@ -1,6 +1,7 @@
 <template>
-  <div class="homePageWrapper" @menuClicked="passToSideBar">
-    <SideNav />
+  <div class="homePageWrapper">
+    <div class="overlay" v-if="$store.state.navOpened" @click="$store.state.navOpened = false"></div>
+    <SideNav :navOpen="$store.state.navOpened" />
     <Header />
     <router-view />
     <NavBar />
@@ -19,18 +20,19 @@ export default {
     SideNav
   },
   data() {
-    return {
-      navOpened: false
-    };
+    return {};
   },
-  methods: {
-    passToSideBar(value) {
-      alert(value);
-      this.navOpened = value;
-    }
-  }
+  methods: {}
 };
 </script>
 
 <style scoped>
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  transition: background 0.2s ease;
+}
 </style>;

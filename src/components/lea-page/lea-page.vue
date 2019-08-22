@@ -1,9 +1,7 @@
 <template>
-  <main>
-    <div class="lea-grid">
-      <h1 class="heading">Lea</h1>
-      <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
-    </div>
+  <main class="lea-grid">
+    <h1 class="heading">Lea</h1>
+    <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
   </main>
 </template>
 
@@ -26,12 +24,10 @@ export default {
 <style scoped>
 .lea-grid {
   max-width: 1000px;
-  margin: auto;
-  padding: 0 10px;
   text-align: center;
 }
 
 h1 {
-  margin: 30px auto;
+  margin: auto;
 }
 </style>

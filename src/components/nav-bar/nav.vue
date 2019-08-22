@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <SearchBar @menuClicked="$emit('menuClicked',true)" />
-    <NavMenu @menu="sendData" />
+    <SearchBar @menuClicked="$emit('menuClicked')" />
+    <NavMenu />
   </nav>
 </template>
 
@@ -14,11 +14,7 @@ export default {
     SearchBar,
     NavMenu
   },
-  methods: {
-    sendData(val) {
-      this.$emit("menu", val);
-    }
-  }
+  methods: {}
 };
 </script>
 
