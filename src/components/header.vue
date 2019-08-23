@@ -3,18 +3,29 @@
     <Logo :fill="'#fff'" />
     <h1>Vox</h1>
     <br />
-    <router-link to="/">
-      <button>Logout</button>
-    </router-link>
+    <button @click="logOut">Logout</button>
   </header>
 </template>
 
 <script>
+import firebase from "firebase/app";
+import "firebase/auth";
+
 import Logo from "../assets/logo";
 
 export default {
   components: {
     Logo
+  },
+  methods: {
+    logOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace("/");
+        });
+    }
   }
 };
 </script>

@@ -1,19 +1,9 @@
 <template>
   <div class="inputLogin">
-    <template v-if="placeholder === 'Student ID' ">
-      <UserIcon />
-      <input
-        required
-        type="text"
-        :placeholder="placeholder"
-        v-model="stuId"
-        @keyup="$emit('idInput',stuId)"
-      />
-    </template>
+    <template v-if="placeholder === 'Student ID' "></template>
     <template v-else>
       <KeyIcon />
       <input
-        required
         type="password"
         :placeholder="placeholder"
         v-model="stuPass"

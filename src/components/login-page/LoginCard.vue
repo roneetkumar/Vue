@@ -3,23 +3,35 @@
     <form>
       <Logo :fill="'#33e4ef'" />
       <h1>Vox</h1>
-      <Input :placeholder="'Student ID'" @idInput="stuIdInput" />
-      <Input :placeholder="'Password'" @passInput="stuPassInput" />
-
+      <div class="inputLogin">
+        <UserIcon />
+        <input type="text" placeholder="Student ID" v-model="student.id" />
+      </div>
+      <div class="inputLogin">
+        <KeyIcon />
+        <input type="password" placeholder="Password" v-model="student.pass" />
+      </div>
       <button @click.prevent="logIn" class="createAccount">
         <router-link to="/">Submit</router-link>
       </button>
+
       <h2>Forget Password ?</h2>
-      <button>Create Account</button>
+      <router-link to="/CreateAccount">
+        <button>Create Account</button>
+      </router-link>
+
       <h2>Fraincais</h2>
     </form>
   </div>
 </template>
 
 <script>
+import firebase from "firebase/app";
+import "firebase/auth";
+
 import Logo from "../../assets/logo";
-import Input from "./input";
-import Students from "../user-data/students.json";
+import UserIcon from "../../assets/userIcon";
+import KeyIcon from "../../assets/keyIcon";
 
 export default {
   props: {
@@ -27,13 +39,13 @@ export default {
   },
   components: {
     Logo,
-    Input
+    KeyIcon,
+    UserIcon
   },
   data() {
     return {
-      Students,
       userFound: false,
-      inputs: {
+      student: {
         id: "",
         pass: ""
       }
@@ -41,32 +53,55 @@ export default {
   },
   methods: {
     logIn() {
-      this.Students.forEach(student => {
-        if (student.id === this.inputs.id) {
-          this.userFound = true;
-          if (student.pass === this.inputs.pass) {
-            alert(`Welcome ${student.name}`);
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.student.id, this.student.pass)
+        .then(
+          function(user) {
+            alert(`Welcome ${user}`);
             this.$router.replace({ name: "Lea" });
-          } else {
-            alert("Wrong Password");
+          },
+          function(err) {
+            alert(err.message);
           }
-        }
-      });
-      if (!this.userFound) {
-        alert("User Not Found");
-      }
-    },
-    stuIdInput(value) {
-      this.inputs.id = value;
-    },
-    stuPassInput(value) {
-      this.inputs.pass = value;
+        );
     }
   }
 };
 </script>
 
 <style scoped>
+input {
+  display: inline-block;
+  font-size: 20px;
+  border: 0;
+  box-sizing: border-box;
+  color: #33e4ef;
+  outline: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.inputLogin {
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.24);
+}
+
+.inputLogin svg {
+  margin-right: 10px;
+  fill: rgba(0, 0, 0, 0.24);
+}
+
 .loginWrapper {
   position: relative;
   background: linear-gradient(340deg, #20c4ce 12%, #33e4ef 86%);
