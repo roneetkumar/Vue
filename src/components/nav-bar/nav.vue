@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import SearchBar from "./searchbar";
-import NavMenu from "./nav-menu";
+import SearchBar from "./SearchBar";
+import NavMenu from "./NavMenu";
 
 export default {
   components: {

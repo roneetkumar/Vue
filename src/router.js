@@ -4,13 +4,12 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 import Login from "@/components/login-page/LoginCard";
-import Lea from '@/components/lea-page/lea-page'
-import Mio from '@/components/mio-page/mio-page'
-import News from "@/components/news-page/news-page";
-import Service from "@/components/service-page/service-page";
-import About from "@/components/about-page/about-page";
-import Home from "@/components/home-page";
-import CreateAccount from "@/components/login-page/create-account";
+import Home from "@/components/Home";
+import Lea from '@/components/lea-page/Lea'
+import Mio from '@/components/mio-page/Mio'
+import News from "@/components/news-page/News";
+import Service from "@/components/service-page/Service";
+import About from "@/components/about-page/About";
 
 Vue.use(VueRouter);
 
@@ -29,11 +28,6 @@ const router = new VueRouter({
             path: '/login',
             name: 'Login',
             component: Login,
-        },
-        {
-            path: '/CreateAccount',
-            name: 'CreateAccount',
-            component: CreateAccount
         },
         {
             path: '/home',

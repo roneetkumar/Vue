@@ -5,19 +5,15 @@
       <h1>Vox</h1>
       <div class="inputLogin">
         <UserIcon />
-        <input type="text" placeholder="Student ID" v-model="student.id" />
+        <input type="text" placeholder="Email" v-model="student.id" />
       </div>
       <div class="inputLogin">
         <KeyIcon />
         <input type="password" placeholder="Password" v-model="student.pass" />
       </div>
-      <button @click.prevent="logIn" class="createAccount">Submit</button>
-
+      <button @click.prevent="logIn" class="login">Submit</button>
       <h2>Forget Password ?</h2>
-      <router-link to="/CreateAccount">
-        <button>Create Account</button>
-      </router-link>
-
+      <button @click.prevent="createAccount">Create Account</button>
       <h2>Fraincais</h2>
     </form>
   </div>
@@ -27,9 +23,9 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 
-import Logo from "../../assets/logo";
-import UserIcon from "../../assets/userIcon";
-import KeyIcon from "../../assets/keyIcon";
+import Logo from "../../assets/Logo";
+import UserIcon from "../../assets/UserIcon";
+import KeyIcon from "../../assets/KeyIcon";
 
 export default {
   props: {
@@ -55,6 +51,16 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.student.id, this.student.pass)
         .then(() => this.$router.replace("home"), err => alert(err.message));
+      this.student.id = "";
+      this.student.pass = "";
+    },
+    createAccount() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.student.id, this.student.pass)
+        .then(() => this.$router.replace("home"), err => alert(err.message));
+      this.student.id = "";
+      this.student.pass = "";
     }
   }
 };
@@ -155,13 +161,13 @@ button:hover {
   color: #20c4ce;
 }
 
-.createAccount {
+.login {
   border: 0;
   background: #33e4ef;
   color: #fff;
 }
 
-.createAccount:hover {
+.login:hover {
   background: #20c4ce;
   color: #fff;
 }
@@ -174,7 +180,7 @@ input {
   color: #33e4ef;
   outline: 0;
 }
-
+/* 
 .studentid,
 .password {
   width: 300px;
@@ -183,7 +189,7 @@ input {
   display: flex;
   align-items: center;
   margin: auto;
-}
+} */
 
 input::placeholder {
   color: rgba(0, 0, 0, 0.24);

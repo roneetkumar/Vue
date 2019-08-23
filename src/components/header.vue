@@ -11,7 +11,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 
-import Logo from "../assets/logo";
+import Logo from "../assets/Logo";
 
 export default {
   components: {

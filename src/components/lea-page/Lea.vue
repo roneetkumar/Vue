@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import LeaCard from "./lea-card";
-import courseData from "../user-data/courses.json";
+import LeaCard from "./LeaCard";
+import courseData from "../../data/courses";
 
 export default {
   components: {

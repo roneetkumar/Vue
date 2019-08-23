@@ -1,0 +1,16 @@
+{
+  "name": "Omnivox",
+  "short_name": "Omnivox",
+  "icons": [
+    {
+      "src": "./dist/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/ico"
+    }
+  ],
+  "start_url": "./dist/index.html?homescreen=1",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff"
+}

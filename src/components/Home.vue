@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import Header from "./header";
-import NavBar from "./nav-bar/nav";
-import SideNav from "./side-nav/side-nav";
+import Header from "./Header";
+import NavBar from "./nav-bar/Nav";
+import SideNav from "./side-nav/SideNav";
 
 export default {
   components: {

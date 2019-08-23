@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import MioIcon from "../../assets/mioIcon";
-import NewsIcon from "../../assets/newsIcon";
-import AboutIcon from "../../assets/aboutIcon";
-import LeaIcon from "../../assets/leaIcon";
-import ServiceIcon from "../../assets/serviceIcon";
+import MioIcon from "../../assets/MioIcon";
+import NewsIcon from "../../assets/NewsIcon";
+import AboutIcon from "../../assets/AboutIcon";
+import LeaIcon from "../../assets/LeaIcon";
+import ServiceIcon from "../../assets/ServiceIcon";
 export default {
   props: {
     itemName: String
