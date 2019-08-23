@@ -24,14 +24,7 @@ export default {
       firebase
         .auth()
         .createUserWithEmailAndPassword(this.userId, this.password)
-        .then(
-          function(user) {
-            alert("user created" + user);
-          },
-          function(err) {
-            alert("error" + err.message);
-          }
-        );
+        .then(() => this.$router.replace("home"), err => alert(err.message));
     }
   }
 };

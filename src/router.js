@@ -14,7 +14,6 @@ import CreateAccount from "@/components/login-page/create-account";
 
 Vue.use(VueRouter);
 
-
 const router = new VueRouter({
     mode: 'history',
     routes: [
@@ -39,40 +38,42 @@ const router = new VueRouter({
         {
             path: '/home',
             name: 'Home',
+            redirect: '/home/lea',
             component: Home,
-            meta: {
-                requireAuth: true
-            },
+            meta: { requiresAuth: true },
             children: [
-
                 {
-                    path: '/home/lea',
+                    path: 'lea',
                     name: 'Lea',
-                    component: Lea
+                    component: Lea,
+                    meta: { requiresAuth: true },
                 },
                 {
-                    path: '/home/mio',
+                    path: 'mio',
                     name: 'Mio',
-                    component: Mio
+                    component: Mio,
+                    meta: { requiresAuth: true },
                 },
                 {
-                    path: '/home/news',
+                    path: 'news',
                     name: 'News',
-                    component: News
+                    component: News,
+                    meta: { requiresAuth: true },
                 },
                 {
-                    path: '/home/service',
+                    path: 'service',
                     name: 'Services',
-                    component: Service
+                    component: Service,
+                    meta: { requiresAuth: true },
                 },
                 {
-                    path: '/home/about',
+                    path: 'about',
                     name: 'About',
-                    component: About
+                    component: About,
+                    meta: { requiresAuth: true },
                 }
             ]
         },
-
     ],
 })
 
@@ -80,8 +81,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
     const currentUser = firebase.auth().currentUser;
     const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-
-    if (requiresAuth && !currentUser) next('/');
+    if (requiresAuth && !currentUser) next('login');
     else if (!requiresAuth && currentUser) next('home');
     else next();
 });

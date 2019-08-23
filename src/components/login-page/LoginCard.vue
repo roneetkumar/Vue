@@ -11,9 +11,7 @@
         <KeyIcon />
         <input type="password" placeholder="Password" v-model="student.pass" />
       </div>
-      <button @click.prevent="logIn" class="createAccount">
-        <router-link to="/">Submit</router-link>
-      </button>
+      <button @click.prevent="logIn" class="createAccount">Submit</button>
 
       <h2>Forget Password ?</h2>
       <router-link to="/CreateAccount">
@@ -56,15 +54,7 @@ export default {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.student.id, this.student.pass)
-        .then(
-          function(user) {
-            alert(`Welcome ${user}`);
-            this.$router.replace({ name: "Lea" });
-          },
-          function(err) {
-            alert(err.message);
-          }
-        );
+        .then(() => this.$router.replace("home"), err => alert(err.message));
     }
   }
 };

@@ -9,16 +9,14 @@ Vue.config.productionTip = false
 let app = '';
 
 const config = {
-  apiKey: "AIzaSyD5xMdV3u8HMl-Ky6-dBHadwsliFXycY4A",
-  authDomain: "vuejs-9e4f5.firebaseapp.com",
-  databaseURL: "https://vuejs-9e4f5.firebaseio.com",
-  projectId: "vuejs-9e4f5",
+  apiKey: "AIzaSyCaz2oF2wLxARhmBsw9XQh1OGZT3sUwVLI",
+  authDomain: "myomnivox.firebaseapp.com",
+  databaseURL: "https://myomnivox.firebaseio.com",
+  projectId: "myomnivox",
   storageBucket: "",
-  messagingSenderId: "296064934086",
-  appId: "1:296064934086:web:c734a76a76d28105"
+  messagingSenderId: "535661388551",
+  appId: "1:535661388551:web:b8416dead5e5b9ea"
 };
-
-
 
 firebase.initializeApp(config);
 
