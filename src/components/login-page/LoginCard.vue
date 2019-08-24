@@ -1,8 +1,7 @@
 <template>
   <div class="loginWrapper">
     <form>
-      <Logo :fill="'#33e4ef'" />
-      <h1>Vox</h1>
+      <Logo />
       <div class="inputLogin">
         <UserIcon />
         <input type="text" placeholder="Email" v-model="student.id" />
@@ -72,7 +71,7 @@ input {
   font-size: 20px;
   border: 0;
   box-sizing: border-box;
-  color: #33e4ef;
+  color: var(--colorLight);
   outline: 0;
   height: 100%;
   width: 100%;
@@ -85,8 +84,12 @@ input {
   display: flex;
   align-items: center;
   margin: auto;
-  margin-bottom: 30px;
+  margin-top: 30px;
   max-width: 300px;
+}
+
+.inputLogin:hover {
+  border-bottom: 2px solid var(--colorDark);
 }
 
 input::placeholder {
@@ -100,7 +103,7 @@ input::placeholder {
 
 .loginWrapper {
   position: relative;
-  background: linear-gradient(340deg, #20c4ce 12%, #33e4ef 86%);
+  background: var(--colorbg);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -109,6 +112,7 @@ input::placeholder {
   padding: 10px;
   overflow: hidden;
   box-sizing: border-box;
+  text-align: center;
 }
 
 form {
@@ -134,7 +138,7 @@ h2 {
 h1 {
   text-align: center;
   margin-bottom: 40px;
-  color: #33e4ef;
+  color: var(--colorLight);
   font-size: 24px;
 }
 
@@ -148,8 +152,8 @@ button {
   max-width: 300px;
   height: 60px;
   border-radius: 14px;
-  border: 3px solid #33e4ef;
-  color: #33e4ef;
+  border: 3px solid var(--colorLight);
+  color: var(--colorLight);
   background: #fff;
   margin: 10px auto;
   display: block;
@@ -157,18 +161,19 @@ button {
 }
 
 button:hover {
-  border: 3px solid #20c4ce;
-  color: #20c4ce;
+  border: 3px solid var(--colorDark);
+  color: var(--colorDark);
 }
 
 .login {
   border: 0;
-  background: #33e4ef;
+  background: var(--colorLight);
   color: #fff;
+  margin-top: 30px;
 }
 
 .login:hover {
-  background: #20c4ce;
+  background: var(--colorDark);
   color: #fff;
 }
 
@@ -177,19 +182,9 @@ input {
   font-size: 20px;
   border: 0;
   box-sizing: border-box;
-  color: #33e4ef;
+  color: var(--colorLight);
   outline: 0;
 }
-/* 
-.studentid,
-.password {
-  width: 300px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-  padding: 14px 0;
-  display: flex;
-  align-items: center;
-  margin: auto;
-} */
 
 input::placeholder {
   color: rgba(0, 0, 0, 0.24);

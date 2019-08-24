@@ -35,23 +35,25 @@ export default {
 .icon {
   width: 50px;
   height: 50px;
-  background: #fff;
   border-radius: 50%;
   margin: auto;
   margin-bottom: 6px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #20c4ce;
+  background: var(--colorbg);
+  fill: #fff;
   box-sizing: border-box;
+  cursor: default;
 }
 
 .item span {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--colorDark);
 }
 
 .item:hover .icon {

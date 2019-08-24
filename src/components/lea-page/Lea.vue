@@ -1,6 +1,6 @@
 <template>
   <main class="lea-grid">
-    <h1 class="heading">Lea</h1>
+    <button @click="logOut">Logout</button>
     <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
   </main>
 </template>
@@ -8,7 +8,8 @@
 <script>
 import LeaCard from "./LeaCard";
 import courseData from "../../data/courses";
-
+import firebase from "firebase/app";
+import "firebase/auth";
 export default {
   components: {
     LeaCard
@@ -17,6 +18,14 @@ export default {
     return {
       courseData
     };
+  },
+  methods: {
+    logOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("login"));
+    }
   }
 };
 </script>
@@ -27,7 +36,14 @@ export default {
   text-align: center;
 }
 
-h1 {
-  margin: auto;
+button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid slategrey;
+  outline: 0;
+  margin: 20px auto;
+  display: block;
+  /* right: 10px;
+  position: fixed; */
 }
 </style>

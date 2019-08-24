@@ -1,32 +1,53 @@
 <template>
-  <svg
-    class="logo"
-    width="36"
-    height="36"
-    viewBox="0 0 36 36"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M29.4579 12H25.3188C24.6559 10.83 23.7426 9.825 22.6379 9.06L25.0389 6.615L22.962 4.5L19.7656 7.755C19.088 7.59 18.3957 7.5 17.6739 7.5C16.9521 7.5 16.2598 7.59 15.597 7.755L12.3859 4.5L10.3089 6.615L12.6952 9.06C11.6052 9.825 10.6919 10.83 10.0291 12H5.88995V15H8.96851C8.89486 15.495 8.83594 15.99 8.83594 16.5V18H5.88995V21H8.83594V22.5C8.83594 23.01 8.89486 23.505 8.96851 24H5.88995V27H10.0291C11.561 29.685 14.4039 31.5 17.6739 31.5C20.944 31.5 23.7868 29.685 25.3188 27H29.4579V24H26.3793C26.453 23.505 26.5119 23.01 26.5119 22.5V21H29.4579V18H26.5119V16.5C26.5119 15.99 26.453 15.495 26.3793 15H29.4579V12V12ZM20.6208 24H14.7288V21H20.6208V24V24ZM20.6208 18H14.7288V15H20.6208V18V18Z"
-      :fill="fill"
-    />
-  </svg>
+  <div>
+    <div class="logoWrapper">
+      <div class="logo"></div>
+    </div>
+    <div class="title">
+      <h1>VOX</h1>
+      <span>For Students</span>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-  props: {
-    fill: String
-  }
-};
+export default {};
 </script>
 
 <style scoped>
-svg {
-  margin: auto;
-  display: block;
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.title span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2948ff;
+}
+
+.logoWrapper {
+  padding: 5px 10px;
+  border-right: 1px solid #2948ff;
+  display: inline-block;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid #2948ff;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #2948ff;
 }
 </style>

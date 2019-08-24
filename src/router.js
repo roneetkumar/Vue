@@ -23,18 +23,22 @@ const router = new VueRouter({
         {
             path: '/',
             redirect: '/login'
+
         },
         {
             path: '/login',
             name: 'Login',
             component: Login,
+
         },
         {
             path: '/home',
             name: 'Home',
             redirect: '/home/lea',
             component: Home,
-            meta: { requiresAuth: true },
+            meta: {
+                requiresAuth: true
+            },
             children: [
                 {
                     path: 'lea',
@@ -70,7 +74,6 @@ const router = new VueRouter({
         },
     ],
 })
-
 
 router.beforeEach((to, from, next) => {
     const currentUser = firebase.auth().currentUser;

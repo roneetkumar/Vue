@@ -16,6 +16,12 @@ export default {
 </script>
 
 <style>
+:root {
+  --colorDark: #2948ff;
+  --colorLight: #396afc;
+  --colorbg: linear-gradient(0deg, #2948ff, #396afc);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,26 +38,26 @@ a {
 }
 
 .homePageWrapper {
-  background: #26d0d91a;
+  background: #fff;
 }
 
 main {
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 0 10px;
   padding-bottom: 168px;
 }
 
-button {
-  display: block;
-  margin: 10px auto;
+main h1 {
+  margin: auto;
+  color: var(--colorDark);
 }
 
 .menu-active > .item > .icon > svg {
-  fill: #fff;
+  fill: var(--colorDark);
 }
 
 .menu-active > .item > .icon {
-  background: #20c4ce;
-  border: 2px solid #fff;
+  background: #fff;
+  border: 3px solid var(--colorDark);
 }
 </style>

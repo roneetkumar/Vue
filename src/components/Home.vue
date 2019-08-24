@@ -3,6 +3,8 @@
     <div class="overlay" v-if="$store.state.navOpened" @click="$store.state.navOpened = false"></div>
     <SideNav :navOpen="$store.state.navOpened" />
     <Header />
+    <SearchBar @menuClicked="$emit('menuClicked')" />
+
     <router-view />
     <NavBar />
   </div>
@@ -12,17 +14,15 @@
 import Header from "./Header";
 import NavBar from "./nav-bar/Nav";
 import SideNav from "./side-nav/SideNav";
+import SearchBar from "./nav-bar/SearchBar";
 
 export default {
   components: {
     Header,
     NavBar,
+    SearchBar,
     SideNav
-  },
-  data() {
-    return {};
-  },
-  methods: {}
+  }
 };
 </script>
 
@@ -31,7 +31,7 @@ export default {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
   transition: background 0.2s ease;
 }

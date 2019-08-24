@@ -1,17 +1,14 @@
 <template>
   <nav>
-    <SearchBar @menuClicked="$emit('menuClicked')" />
     <NavMenu />
   </nav>
 </template>
 
 <script>
-import SearchBar from "./SearchBar";
 import NavMenu from "./NavMenu";
 
 export default {
   components: {
-    SearchBar,
     NavMenu
   },
   methods: {}
@@ -23,10 +20,11 @@ nav {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  background: linear-gradient(320deg, #20c4ce 15%, #33e4ef 85%);
+  padding: 20px 10px;
+  color: var(--colorDark);
+  background: #fff;
   position: fixed;
   bottom: 0;
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1);
 }
 </style>
