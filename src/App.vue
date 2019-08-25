@@ -42,21 +42,22 @@ a {
 }
 
 main {
-  margin: 10px auto;
-  padding: 0 10px;
+  margin: auto;
   padding-bottom: 168px;
 }
 
 main h1 {
-  margin: auto;
+  text-align: center;
+  margin: 20px auto;
   color: var(--colorDark);
+  text-transform: capitalize;
 }
 
-.menu-active > .item > .icon > svg {
+.menu-active .item .icon > svg {
   fill: var(--colorDark);
 }
 
-.menu-active > .item > .icon {
+.menu-active .item .icon {
   background: #fff;
   border: 3px solid var(--colorDark);
 }

@@ -26,7 +26,7 @@ export default {
 .card {
   width: 100%;
   max-width: 300px;
-  min-height: 300px;
+  /* min-height: 300px; */
   background: #fff;
   /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
   border-radius: 14px;

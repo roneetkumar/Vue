@@ -2,7 +2,6 @@
   <div class="item">
     <MioIcon v-if="itemName === 'Mio'" />
     <NewsIcon v-else-if="itemName === 'News'" />
-    <AboutIcon v-else-if="itemName === 'About'" />
     <LeaIcon v-else-if="itemName === 'Lea'" />
     <ServiceIcon v-else />
 
@@ -13,7 +12,6 @@
 <script>
 import MioIcon from "../../assets/MioIcon";
 import NewsIcon from "../../assets/NewsIcon";
-import AboutIcon from "../../assets/AboutIcon";
 import LeaIcon from "../../assets/LeaIcon";
 import ServiceIcon from "../../assets/ServiceIcon";
 export default {
@@ -23,7 +21,6 @@ export default {
   components: {
     MioIcon,
     NewsIcon,
-    AboutIcon,
     LeaIcon,
     ServiceIcon
   },
@@ -32,6 +29,9 @@ export default {
 </script>
 
 <style scoped>
+.item {
+  width: 70px;
+}
 .icon {
   width: 50px;
   height: 50px;

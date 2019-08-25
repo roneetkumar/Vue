@@ -1,22 +1,32 @@
 <template>
-  <main class="lea-grid">
+  <main>
+    <LeaMenu :menuItems="menuItems" />
     <button @click="logOut">Logout</button>
-    <LeaCard v-for="card in courseData" :key="card.courseNo" :card="card" />
+    <router-view />
   </main>
 </template>
 
 <script>
-import LeaCard from "./LeaCard";
-import courseData from "../../data/courses";
 import firebase from "firebase/app";
 import "firebase/auth";
+
+import LeaMenu from "../chip-menu/ChipMenu";
+
 export default {
-  components: {
-    LeaCard
-  },
+  components: { LeaMenu },
   data() {
     return {
-      courseData
+      menuItems: [
+        "Announcements",
+        "Documents",
+        "Assignments",
+        "Grades",
+        "Events",
+        "Tearchers",
+        "Website",
+        "Absence",
+        "Forum"
+      ]
     };
   },
   methods: {
@@ -31,11 +41,6 @@ export default {
 </script>
 
 <style scoped>
-.lea-grid {
-  max-width: 1000px;
-  text-align: center;
-}
-
 button {
   padding: 4px 8px;
   border-radius: 4px;
@@ -43,7 +48,5 @@ button {
   outline: 0;
   margin: 20px auto;
   display: block;
-  /* right: 10px;
-  position: fixed; */
 }
 </style>

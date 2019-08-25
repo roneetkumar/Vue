@@ -5,11 +5,16 @@ import "firebase/auth";
 
 import Login from "@/components/login-page/LoginCard";
 import Home from "@/components/Home";
+
+// home page
 import Lea from '@/components/lea-page/Lea'
 import Mio from '@/components/mio-page/Mio'
 import News from "@/components/news-page/News";
 import Service from "@/components/service-page/Service";
-import About from "@/components/about-page/About";
+
+// lea page
+import Announcements from "@/components/lea-page/announcements/Announcements";
+import Documents from "@/components/lea-page/documents/Documents"
 
 Vue.use(VueRouter);
 
@@ -44,7 +49,22 @@ const router = new VueRouter({
                     path: 'lea',
                     name: 'Lea',
                     component: Lea,
+                    redirect: '/home/lea/announcements',
                     meta: { requiresAuth: true },
+                    children: [
+                        {
+                            path: 'announcements',
+                            name: 'Announcements',
+                            component: Announcements,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'documents',
+                            name: 'Documents',
+                            component: Documents,
+                            meta: { requiresAuth: true }
+                        }
+                    ]
                 },
                 {
                     path: 'mio',
@@ -64,12 +84,6 @@ const router = new VueRouter({
                     component: Service,
                     meta: { requiresAuth: true },
                 },
-                {
-                    path: 'about',
-                    name: 'About',
-                    component: About,
-                    meta: { requiresAuth: true },
-                }
             ]
         },
     ],

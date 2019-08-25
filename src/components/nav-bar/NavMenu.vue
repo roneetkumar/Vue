@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      menu: ["News", "Mio", "Lea", "Services", "About"]
+      menu: ["News", "Mio", "Lea", "Services"]
     };
   },
   methods: {}
@@ -31,5 +31,14 @@ export default {
 
 a {
   color: #fff;
+}
+
+.router-link-exact-active > .item > .icon > svg {
+  fill: var(--colorDark);
+}
+
+.router-link-exact-active > .item > .icon {
+  background: #fff;
+  border: 3px solid var(--colorDark);
 }
 </style>
