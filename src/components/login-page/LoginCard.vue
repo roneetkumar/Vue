@@ -2,11 +2,11 @@
   <div class="loginWrapper">
     <form>
       <Logo />
-      <div class="inputLogin">
+      <div class="inputBox">
         <UserIcon />
-        <input type="text" placeholder="Email" v-model="student.id" />
+        <input type="email" placeholder="Email" v-model="student.id" />
       </div>
-      <div class="inputLogin">
+      <div class="inputBox">
         <KeyIcon />
         <input type="password" placeholder="Password" v-model="student.pass" />
       </div>
@@ -37,7 +37,6 @@ export default {
   },
   data() {
     return {
-      userFound: false,
       student: {
         id: "",
         pass: ""
@@ -49,58 +48,33 @@ export default {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.student.id, this.student.pass)
-        .then(() => this.$router.replace("home"), err => alert(err.message));
-      this.student.id = "";
-      this.student.pass = "";
+        .then(
+          () => {
+            this.$router.replace("home");
+            this.student.id = "";
+            this.student.pass = "";
+          },
+          err => alert(err.message)
+        );
     },
     createAccount() {
       firebase
         .auth()
         .createUserWithEmailAndPassword(this.student.id, this.student.pass)
-        .then(() => this.$router.replace("home"), err => alert(err.message));
-      this.student.id = "";
-      this.student.pass = "";
+        .then(
+          () => {
+            this.$router.replace("home");
+            this.student.id = "";
+            this.student.pass = "";
+          },
+          err => alert(err.message)
+        );
     }
   }
 };
 </script>
 
 <style scoped>
-input {
-  display: inline-block;
-  font-size: 20px;
-  border: 0;
-  box-sizing: border-box;
-  color: var(--colorLight);
-  outline: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.inputLogin {
-  width: 100%;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-  height: 55px;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  margin-top: 30px;
-  max-width: 300px;
-}
-
-.inputLogin:hover {
-  border-bottom: 2px solid var(--colorDark);
-}
-
-input::placeholder {
-  color: rgba(0, 0, 0, 0.24);
-}
-
-.inputLogin svg {
-  margin-right: 10px;
-  fill: rgba(0, 0, 0, 0.24);
-}
-
 .loginWrapper {
   position: relative;
   background: var(--colorbg);
@@ -115,12 +89,51 @@ input::placeholder {
   text-align: center;
 }
 
+.inputBox {
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 35px;
+  max-width: 300px;
+}
+
+.inputBox:hover {
+  border-bottom: 2px solid var(--colorDark);
+}
+
+input {
+  display: inline-block;
+  font-size: 20px;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--colorLight);
+  outline: 0;
+  height: 100%;
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.24);
+}
+
+.inputBox svg {
+  margin-right: 10px;
+  fill: rgba(0, 0, 0, 0.24);
+}
+
+.inputBox:hover svg {
+  fill: var(--colorDark);
+}
+
 form {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
   background: #fff;
-  padding: 20px 40px;
+  padding: 30px 40px;
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
@@ -132,12 +145,12 @@ h2 {
   text-align: center;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.24);
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   color: var(--colorLight);
   font-size: 24px;
 }
@@ -169,7 +182,7 @@ button:hover {
   border: 0;
   background: var(--colorLight);
   color: #fff;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .login:hover {

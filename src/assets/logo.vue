@@ -1,12 +1,8 @@
 <template>
-  <div>
-    <div class="logoWrapper">
-      <div class="logo"></div>
-    </div>
-    <div class="title">
-      <h1>VOX</h1>
-      <span>For Students</span>
-    </div>
+  <div class="logo">
+    <img src="/favicon.ico" alt />
+    <br />
+    <h4>For Students</h4>
   </div>
 </template>
 
@@ -15,39 +11,11 @@ export default {};
 </script>
 
 <style scoped>
-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+img {
+  width: 100px;
 }
-
-.title {
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.title span {
-  font-size: 14px;
-  font-weight: bold;
-  color: #2948ff;
-}
-
-.logoWrapper {
-  padding: 5px 10px;
-  border-right: 1px solid #2948ff;
-  display: inline-block;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 6px solid #2948ff;
-  box-sizing: border-box;
-}
-h1 {
-  font-size: 28px;
-  letter-spacing: 1px;
+h4 {
+  margin-top: -10px;
   color: #2948ff;
 }
 </style>

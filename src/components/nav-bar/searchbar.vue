@@ -26,6 +26,7 @@ export default {
   height: 48px;
   background: #ffffff;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  /* border: 1px solid var(--colorLight); */
   border-radius: 14px;
   display: grid;
   grid-template-columns: max-content 1fr max-content;

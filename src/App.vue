@@ -19,7 +19,7 @@ export default {
 :root {
   --colorDark: #2948ff;
   --colorLight: #396afc;
-  --colorbg: linear-gradient(0deg, #2948ff, #396afc);
+  --colorbg: linear-gradient(0deg, var(--colorDark), var(--colorLight));
 }
 
 * {

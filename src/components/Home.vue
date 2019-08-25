@@ -1,9 +1,9 @@
 <template>
   <div class="homePageWrapper">
-    <div class="overlay" v-if="$store.state.navOpened" @click="$store.state.navOpened = false"></div>
+    <div class="overlay" v-show="$store.state.navOpened" @click="$store.state.navOpened = false"></div>
     <SideNav :navOpen="$store.state.navOpened" />
     <Header />
-    <SearchBar @menuClicked="$emit('menuClicked')" />
+    <SearchBar />
 
     <router-view />
     <NavBar />
