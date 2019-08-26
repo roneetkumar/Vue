@@ -12,16 +12,16 @@ export default {
 
 <style scoped>
 li {
-  margin: 0 6px;
-  padding: 8px 14px;
+  height: 32px;
+  padding: 0px 14px;
+  line-height: 33px;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 14px;
   background: var(--colorbg);
-  float: left;
+  display: inline-block;
   color: #fff;
   border-radius: 50px;
   box-sizing: border-box;
-  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 225ms ease-in-out;
 }
 </style>

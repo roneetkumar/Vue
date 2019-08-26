@@ -3,18 +3,8 @@ import VueRouter from 'vue-router'
 import firebase from "firebase/app";
 import "firebase/auth";
 
-import Login from "@/components/login-page/LoginCard";
-import Home from "@/components/Home";
+import * as Modules from "./module";
 
-// home page
-import Lea from '@/components/lea-page/Lea'
-import Mio from '@/components/mio-page/Mio'
-import News from "@/components/news-page/News";
-import Service from "@/components/service-page/Service";
-
-// lea page
-import Announcements from "@/components/lea-page/announcements/Announcements";
-import Documents from "@/components/lea-page/documents/Documents"
 
 Vue.use(VueRouter);
 
@@ -28,19 +18,17 @@ const router = new VueRouter({
         {
             path: '/',
             redirect: '/login'
-
         },
         {
             path: '/login',
             name: 'Login',
-            component: Login,
-
+            component: Modules.Login,
         },
         {
             path: '/home',
             name: 'Home',
             redirect: '/home/lea',
-            component: Home,
+            component: Modules.Home,
             meta: {
                 requiresAuth: true
             },
@@ -48,20 +36,62 @@ const router = new VueRouter({
                 {
                     path: 'lea',
                     name: 'Lea',
-                    component: Lea,
+                    component: Modules.Lea,
                     redirect: '/home/lea/announcements',
                     meta: { requiresAuth: true },
                     children: [
                         {
                             path: 'announcements',
                             name: 'Announcements',
-                            component: Announcements,
+                            component: Modules.Announcements,
                             meta: { requiresAuth: true }
                         },
                         {
                             path: 'documents',
                             name: 'Documents',
-                            component: Documents,
+                            component: Modules.Documents,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'assignments',
+                            name: 'Assignments',
+                            component: Modules.Assignments,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'grades',
+                            name: 'Grades',
+                            component: Modules.Grades,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'events',
+                            name: 'Events',
+                            component: Modules.Events,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'teachers',
+                            name: 'Teachers',
+                            component: Modules.Teachers,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'websites',
+                            name: 'Websites',
+                            component: Modules.Websites,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'absences',
+                            name: 'Absences',
+                            component: Modules.Absences,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'forum',
+                            name: 'Forum',
+                            component: Modules.Forum,
                             meta: { requiresAuth: true }
                         }
                     ]
@@ -69,19 +99,19 @@ const router = new VueRouter({
                 {
                     path: 'mio',
                     name: 'Mio',
-                    component: Mio,
+                    component: Modules.Mio,
                     meta: { requiresAuth: true },
                 },
                 {
                     path: 'news',
                     name: 'News',
-                    component: News,
+                    component: Modules.News,
                     meta: { requiresAuth: true },
                 },
                 {
                     path: 'service',
                     name: 'Services',
-                    component: Service,
+                    component: Modules.Service,
                     meta: { requiresAuth: true },
                 },
             ]
@@ -96,6 +126,5 @@ router.beforeEach((to, from, next) => {
     else if (!requiresAuth && currentUser) next('home');
     else next();
 });
-
 
 export default router;

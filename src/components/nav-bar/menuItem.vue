@@ -38,7 +38,6 @@ export default {
   border-radius: 50%;
   margin: auto;
   margin-bottom: 6px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   transition: transform 0.1s ease-in-out;
   display: flex;
   align-items: center;

@@ -38,7 +38,8 @@ export default {
 
 ul.menu-list {
   list-style: none;
-  margin: 10px;
+  margin: 16px 5px;
+  margin-top: 8px;
   display: inline-block;
   width: max-content;
 }
@@ -46,5 +47,10 @@ ul.menu-list {
 .router-link-exact-active li {
   background: #fff;
   color: var(--colorDark);
+  box-shadow: inset 0 0 0 3px;
+}
+
+a {
+  margin: 0 6px;
 }
 </style>

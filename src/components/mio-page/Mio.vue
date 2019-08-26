@@ -15,7 +15,7 @@ export default {
   components: { MioMenu },
   data() {
     return {
-      menuItems: ["Inbox", "Outbox", "Sent", "Saved", "Draft"]
+      menuItems: ["Inbox", "Outbox", "Sent", "Saved", "Draft", "Trash"]
     };
   }
 };
@@ -35,7 +35,7 @@ ul li {
   height: 70px;
   background: #fff;
   margin: 10px 0;
-  border: 1px solid lightgray;
+  border: 1px solid rgb(138, 138, 138);
   border-radius: 4px;
   display: inline-block;
 }

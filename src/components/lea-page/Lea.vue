@@ -22,9 +22,9 @@ export default {
         "Assignments",
         "Grades",
         "Events",
-        "Tearchers",
-        "Website",
-        "Absence",
+        "Teachers",
+        "Websites",
+        "Absences",
         "Forum"
       ]
     };
