@@ -1,7 +1,7 @@
 <template>
   <div class="searchWrapper">
     <div class="searchBar">
-      <MenuIcon @click.native="$store.state.navOpened = true" />
+      <MenuIcon @click.native="$store.state.navOpened = !$store.state.navOpened" />
       <input type="text" placeholder="Search" />
       <SearchIcon />
     </div>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import SearchIcon from "../../assets/SearchIcon";
-import MenuIcon from "../../assets/MenuIcon";
+import SearchIcon from "../icons/SearchIcon";
+import MenuIcon from "../icons/MenuIcon";
 
 export default {
   components: {

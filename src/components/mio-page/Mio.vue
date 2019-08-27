@@ -1,10 +1,7 @@
 <template>
   <main>
     <MioMenu :menuItems="menuItems" />
-    <h1 class="heading">mio page</h1>
-    <ul>
-      <li v-for="index in 40" :key="index"></li>
-    </ul>
+    <router-view />
   </main>
 </template>
 
@@ -21,20 +18,24 @@ export default {
 };
 </script>
 
-<style scoped>
-ul {
+<style>
+.mioWrapper ul {
   max-width: 1000px;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+  justify-items: center;
   margin: auto;
-  text-align: center;
   padding: 10px;
 }
-ul li {
+
+.mioWrapper ul li {
   width: 100%;
   max-width: 300px;
   height: 70px;
   background: #fff;
-  margin: 10px 0;
+  margin: auto;
   border: 1px solid rgb(138, 138, 138);
   border-radius: 4px;
   display: inline-block;

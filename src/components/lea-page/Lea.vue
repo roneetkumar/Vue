@@ -1,15 +1,11 @@
 <template>
   <main>
     <LeaMenu :menuItems="menuItems" />
-    <button @click="logOut">Logout</button>
     <router-view />
   </main>
 </template>
 
 <script>
-import firebase from "firebase/app";
-import "firebase/auth";
-
 import LeaMenu from "../chip-menu/ChipMenu";
 
 export default {
@@ -29,14 +25,7 @@ export default {
       ]
     };
   },
-  methods: {
-    logOut() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => this.$router.replace("login"));
-    }
-  }
+  methods: {}
 };
 </script>
 

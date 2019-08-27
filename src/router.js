@@ -101,6 +101,45 @@ const router = new VueRouter({
                     name: 'Mio',
                     component: Modules.Mio,
                     meta: { requiresAuth: true },
+                    redirect: '/home/mio/inbox',
+                    children: [
+                        {
+                            path: 'inbox',
+                            name: 'Inbox',
+                            component: Modules.Inbox,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'outbox',
+                            name: 'Outbox',
+                            component: Modules.Outbox,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'sent',
+                            name: 'Sent',
+                            component: Modules.Sent,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'saved',
+                            name: 'Saved',
+                            component: Modules.Saved,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'draft',
+                            name: 'Draft',
+                            component: Modules.Draft,
+                            meta: { requiresAuth: true }
+                        },
+                        {
+                            path: 'trash',
+                            name: 'Trash',
+                            component: Modules.Trash,
+                            meta: { requiresAuth: true }
+                        },
+                    ]
                 },
                 {
                     path: 'news',

@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import MioIcon from "../../assets/MioIcon";
-import NewsIcon from "../../assets/NewsIcon";
-import LeaIcon from "../../assets/LeaIcon";
-import ServiceIcon from "../../assets/ServiceIcon";
+import MioIcon from "../icons/MioIcon";
+import NewsIcon from "../icons/NewsIcon";
+import LeaIcon from "../icons/LeaIcon";
+import ServiceIcon from "../icons/ServiceIcon";
 export default {
   props: {
     itemName: String

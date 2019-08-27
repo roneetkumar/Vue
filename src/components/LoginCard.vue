@@ -22,9 +22,9 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 
-import Logo from "../../assets/Logo";
-import UserIcon from "../../assets/UserIcon";
-import KeyIcon from "../../assets/KeyIcon";
+import Logo from "./icons/Logo";
+import UserIcon from "./icons/UserIcon";
+import KeyIcon from "./icons/KeyIcon";
 
 export default {
   props: {
