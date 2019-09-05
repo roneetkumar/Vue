@@ -1,0 +1,284 @@
+{
+    "inbox": [
+        {
+            "id": 1,
+            "from": "roneet@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 2,
+            "from": "vinay@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 3,
+            "from": "ankit@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 4,
+            "from": "roop@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 5,
+            "from": "davinder@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 6,
+            "from": "sunil@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 7,
+            "from": "roneet@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 8,
+            "from": "vinay@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 9,
+            "from": "ankit@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 10,
+            "from": "roop@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 11,
+            "from": "davinder@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 12,
+            "from": "sunil@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 13,
+            "from": "roop@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 14,
+            "from": "davinder@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 15,
+            "from": "sunil@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        }
+    ],
+    "outbox": [
+        {
+            "id": 1,
+            "to": "sunil@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 2,
+            "to": "davinder@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 3,
+            "to": "ankit@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 4,
+            "to": "vinay@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 5,
+            "to": "sunil@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        },
+        {
+            "id": 6,
+            "to": "shivam@gmail.com",
+            "subject": "Subject of Mail",
+            "body": ""
+        }
+    ],
+    "sent": [
+        {
+            "id": 1,
+            "to": "",
+            "subject": "",
+            "body": "sa"
+        },
+        {
+            "id": 2,
+            "to": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 3,
+            "to": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 4,
+            "to": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 5,
+            "to": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 6,
+            "to": "",
+            "subject": "",
+            "body": ""
+        }
+    ],
+    "saved": [
+        {
+            "id": 1,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 2,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 3,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 4,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 5,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 6,
+            "from": "",
+            "subject": "",
+            "body": ""
+        }
+    ],
+    "draft": [
+        {
+            "id": 1,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 2,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 3,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 4,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 5,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 6,
+            "from": "",
+            "subject": "",
+            "body": ""
+        }
+    ],
+    "trash": [
+        {
+            "id": 1,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 2,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 3,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 4,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 5,
+            "from": "",
+            "subject": "",
+            "body": ""
+        },
+        {
+            "id": 6,
+            "from": "",
+            "subject": "",
+            "body": ""
+        }
+    ]
+}

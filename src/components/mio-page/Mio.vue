@@ -33,11 +33,24 @@ export default {
 .mioWrapper ul li {
   width: 100%;
   max-width: 300px;
-  height: 70px;
+  min-height: 70px;
   background: #fff;
   margin: auto;
-  border: 1px solid rgb(138, 138, 138);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  box-sizing: border-box;
+  padding: 10px;
+  justify-items: right;
+  align-items: center
+}
+
+.mioWrapper ul li svg {
+  border-radius: 50%;
+  float: right;
+  fill: #fff;
+  background: var(--colorbg);
+  padding: 10px;
 }
 </style>

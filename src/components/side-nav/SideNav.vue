@@ -45,7 +45,10 @@ export default {
       firebase
         .auth()
         .signOut()
-        .then(() => this.$router.replace("login"));
+        .then(() => {
+          this.$store.state.navOpened = !this.$store.state.navOpened;
+          this.$router.replace("login");
+        });
     }
   }
 };
