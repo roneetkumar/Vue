@@ -1,15 +1,15 @@
 <template>
 	<main>
-		<MioMenu :menuItems="menuItems" />
+		<ChipMenu :menuItems="menuItems" />
 		<router-view />
 	</main>
 </template>
 
 <script>
-import MioMenu from "../chip-menu/ChipMenu";
+import ChipMenu from "../chip-menu/ChipMenu";
 
 export default {
-	components: { MioMenu },
+	components: { ChipMenu },
 	data() {
 		return {
 			menuItems: ["Inbox", "Outbox", "Sent", "Saved", "Draft", "Trash"]

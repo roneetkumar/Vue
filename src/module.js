@@ -27,6 +27,9 @@ import Saved from "@/components/mio-page/sections/saved/Saved";
 import Draft from "@/components/mio-page/sections/draft/Draft";
 import Trash from "@/components/mio-page/sections/trash/Trash";
 
+import MioDetails from "@/components/mio-page/sections/mioDetails";
+
+
 
 
 
@@ -42,5 +45,6 @@ export {
     Websites,
     Absences,
     Forum,
-    Inbox, Outbox, Sent, Saved, Draft, Trash
+    Inbox, Outbox, Sent, Saved, Draft, Trash,
+    MioDetails
 }

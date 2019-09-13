@@ -107,7 +107,15 @@ const router = new VueRouter({
                             path: 'inbox',
                             name: 'Inbox',
                             component: Modules.Inbox,
-                            meta: { requiresAuth: true }
+                            meta: { requiresAuth: true },
+                            children: [
+                                {
+                                    path: 'mio#:userId',
+                                    name: 'MioDetails',
+                                    component: Modules.MioDetails,
+                                    meta: { requiresAuth: true }
+                                }
+                            ]
                         },
                         {
                             path: 'outbox',

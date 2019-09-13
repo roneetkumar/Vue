@@ -2,17 +2,17 @@
 	<div class="menu-wrapper">
 		<ul class="menu-list">
 			<router-link v-for="item in menuItems" :key="item" :to="{name:item}">
-				<LeaMenuItem :itemName="item" />
+				<ChipMenuItem :itemName="item" />
 			</router-link>
 		</ul>
 	</div>
 </template>
 
 <script>
-import LeaMenuItem from "../chip-menu/ChipMenuItem";
+import ChipMenuItem from "../chip-menu/ChipMenuItem";
 
 export default {
-	components: { LeaMenuItem },
+	components: { ChipMenuItem },
 	props: {
 		menuItems: Array
 	},
