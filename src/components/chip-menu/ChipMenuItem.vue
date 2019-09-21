@@ -6,7 +6,8 @@
 export default {
 	props: {
 		itemName: String
-	}
+	},
+	methods: {}
 };
 </script>
 

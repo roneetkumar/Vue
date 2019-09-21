@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        navOpened: false
+        navOpened: false,
+        mioShow: true,
     }
 })

@@ -1,13 +1,15 @@
 <template>
 	<div>
-		<h2>{{mail.from}}</h2>
+		<!-- <h2>{{mail.from}}</h2> -->
+		<h1>hello</h1>
 	</div>
 </template>
 
 <script>
 export default {
-	props: {
-		mail: Object
+	props: {},
+	data() {
+		return {};
 	}
 };
 </script>

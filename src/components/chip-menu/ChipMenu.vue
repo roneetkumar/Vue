@@ -18,7 +18,8 @@ export default {
 	},
 	data() {
 		return {};
-	}
+	},
+	methods: {}
 };
 </script>
 
@@ -44,7 +45,7 @@ ul.menu-list {
 	width: max-content;
 }
 
-.router-link-exact-active li {
+.router-link-active li {
 	background: #fff;
 	color: var(--colorDark);
 	box-shadow: inset 0 0 0 3px;
