@@ -1,7 +1,7 @@
 <template>
-  <nav>
+  <Nav>
     <NavMenu />
-  </nav>
+  </Nav>
 </template>
 
 <script>
